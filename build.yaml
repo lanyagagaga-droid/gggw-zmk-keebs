@@ -1,4 +1,5 @@
 ---
+include:
   - board: levels54_left
   - board: levels54_right
     snippet: studio-rpc-usb-uart
