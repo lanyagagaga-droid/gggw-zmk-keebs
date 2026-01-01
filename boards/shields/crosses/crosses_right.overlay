@@ -20,13 +20,14 @@
 
 &kscan0 {
   col-gpios
-    = <&pro_micro 14 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 10 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-    , <&pro_micro  0 GPIO_ACTIVE_HIGH>
+    = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio0 10  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
     ;
+
 };
 
 &trackball_peripheral_listener {
@@ -38,7 +39,7 @@
 
   trackball_central: trackball_central@0 {
     status = "okay";
-    compatible = "pixart,pmw3610-efogtech";
+    compatible = "pixart,pmw3610-alt";
     reg = <0>;
     spi-max-frequency = <2000000>;
     irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
